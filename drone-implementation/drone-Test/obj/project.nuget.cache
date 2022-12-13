@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "fWpFihl063YjjOA7kF4T+r3+MvTcanscgR10BG951VNsY298Dia1Q1EbzuYDsWfb4n94QqHOANqEGdSoUjgYeA==",
+  "dgSpecHash": "a891swHuIP69do9zWMhdXA1w1cvQW8c7I5vV0xGDxy3vQ1+/+VC1UttYK5MbFWRFx63bfQEc+LlLbSirR8Ldbw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Dell\\source\\repos\\timothy-adebo\\drone-implementation\\drone-Test\\drone-Test.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.codecoverage\\17.1.0\\microsoft.codecoverage.17.1.0.nupkg.sha512",
-    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.11\\microsoft.entityframeworkcore.6.0.11.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.11\\microsoft.entityframeworkcore.abstractions.6.0.11.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.11\\microsoft.entityframeworkcore.analyzers.6.0.11.nupkg.sha512",
