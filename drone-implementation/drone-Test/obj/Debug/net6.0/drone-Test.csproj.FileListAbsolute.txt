@@ -1,9 +1,4 @@
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\CoverletSourceRootsMapping
-C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.csproj.AssemblyReference.cache
-C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.AssemblyInfoInputs.cache
-C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.AssemblyInfo.cs
-C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.csproj.CoreCompileInputs.cache
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\testhost.dll
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\drone-implementation.deps.json
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\drone-implementation.runtimeconfig.json
@@ -22,6 +17,7 @@ C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Deb
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\drone-Test.runtimeconfig.json
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\drone-Test.dll
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\drone-Test.pdb
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -112,6 +108,11 @@ C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Deb
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\drone-implementation.pdb
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\drone-DataAccess.pdb
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\drone-Domain.pdb
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.AssemblyInfo.cs
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.csproj.CoreCompileInputs.cache
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.csproj.CopyComplete
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.dll
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\refint\drone-Test.dll

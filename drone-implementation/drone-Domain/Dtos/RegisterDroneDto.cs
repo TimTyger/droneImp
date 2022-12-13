@@ -15,8 +15,6 @@ namespace drone_Domain.Dtos
         public int ModelId { get; set; }
         [Required]
         public int StateId { get; set; }
-       [Required] 
-        public decimal Weight { get; set; }
         [Required]
         public int BatteryLevel { get; set; }
     }

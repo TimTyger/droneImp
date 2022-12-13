@@ -8,6 +8,7 @@ namespace drone_Domain.Entities
 {
     public class DroneModel : BaseEntity
     {
-        public string Value { get; set; }
+        public string Model { get; set; }
+        public decimal MaxWeight { get; set; }
     }
 }

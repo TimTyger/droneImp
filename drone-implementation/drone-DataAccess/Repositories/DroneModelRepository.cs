@@ -13,6 +13,7 @@ namespace drone_DataAccess.Repositories
     {
         public DroneModelRepository(ApplicationContext context) : base(context)
         {
+                
         }
 
     }
