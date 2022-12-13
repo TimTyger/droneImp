@@ -3,3 +3,13 @@ C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\o
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\obj\Debug\net6.0\drone-DataAccess.AssemblyInfoInputs.cache
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\obj\Debug\net6.0\drone-DataAccess.AssemblyInfo.cs
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\obj\Debug\net6.0\drone-DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\bin\Debug\net6.0\drone-DataAccess.deps.json
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\bin\Debug\net6.0\drone-DataAccess.dll
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\bin\Debug\net6.0\drone-DataAccess.pdb
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\bin\Debug\net6.0\drone-Domain.dll
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\bin\Debug\net6.0\drone-Domain.pdb
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\obj\Debug\net6.0\drone-DataAccess.csproj.CopyComplete
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\obj\Debug\net6.0\drone-DataAccess.dll
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\obj\Debug\net6.0\refint\drone-DataAccess.dll
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\obj\Debug\net6.0\drone-DataAccess.pdb
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-DataAccess\obj\Debug\net6.0\ref\drone-DataAccess.dll

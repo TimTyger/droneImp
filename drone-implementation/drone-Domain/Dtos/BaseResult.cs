@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Dtos
+namespace drone_Domain.Dtos
 {
     public class BaseResult<T>
     {

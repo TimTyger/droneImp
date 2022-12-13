@@ -1164,6 +1164,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.11",
           "Microsoft.EntityFrameworkCore.InMemory": "6.0.11",
           "drone-Domain": "1.0.0"
         },
@@ -1188,6 +1189,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.11",
+          "Microsoft.EntityFrameworkCore.InMemory": "6.0.11",
           "Swashbuckle.AspNetCore": "6.2.3",
           "drone-DataAccess": "1.0.0"
         },

@@ -3,3 +3,10 @@ C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\D
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\Debug\net6.0\drone-Domain.AssemblyInfoInputs.cache
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\Debug\net6.0\drone-Domain.AssemblyInfo.cs
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\Debug\net6.0\drone-Domain.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\bin\Debug\net6.0\drone-Domain.deps.json
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\bin\Debug\net6.0\drone-Domain.dll
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\bin\Debug\net6.0\drone-Domain.pdb
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\Debug\net6.0\drone-Domain.dll
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\Debug\net6.0\refint\drone-Domain.dll
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\Debug\net6.0\drone-Domain.pdb
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\Debug\net6.0\ref\drone-Domain.dll
