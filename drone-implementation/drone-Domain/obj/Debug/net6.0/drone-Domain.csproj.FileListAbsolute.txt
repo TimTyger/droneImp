@@ -1,0 +1,5 @@
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\Debug\net6.0\drone-Domain.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\Debug\net6.0\drone-Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\Debug\net6.0\drone-Domain.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\Debug\net6.0\drone-Domain.AssemblyInfo.cs
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Domain\obj\Debug\net6.0\drone-Domain.csproj.CoreCompileInputs.cache

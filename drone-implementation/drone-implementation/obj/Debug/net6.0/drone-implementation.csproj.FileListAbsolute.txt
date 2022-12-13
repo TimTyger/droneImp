@@ -1,0 +1,6 @@
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\obj\Debug\net6.0\drone-implementation.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\obj\Debug\net6.0\drone-implementation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\obj\Debug\net6.0\drone-implementation.AssemblyInfoInputs.cache
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\obj\Debug\net6.0\drone-implementation.AssemblyInfo.cs
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\obj\Debug\net6.0\drone-implementation.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\obj\Debug\net6.0\drone-implementation.MvcApplicationPartsAssemblyInfo.cache
