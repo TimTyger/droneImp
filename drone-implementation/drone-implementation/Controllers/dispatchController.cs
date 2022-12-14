@@ -30,6 +30,18 @@ namespace drone_implementation.Controllers
             var response =  await _droneService.FetchDrones();
             return StatusCode(response.StatusCode, response);
         }
+        
+        [HttpGet]
+        [Route("FetchAvailableDrones")]
+
+        [ProducesResponseType(typeof(BaseResult<List<DroneResp>>), 200)]
+        [ProducesResponseType(typeof(BaseResult<>), 400)]
+        [ProducesResponseType(typeof(BaseResult<>), 500)]
+        public async Task<IActionResult> GetAllAvailbleDrones()
+        {
+            var response =  await _droneService.FetchAvailbleDrones();
+            return StatusCode(response.StatusCode, response);
+        }
 
         [HttpGet("{serialNo}")]
         [Route("FetchDroneItems")]
@@ -40,6 +52,18 @@ namespace drone_implementation.Controllers
         public async Task<IActionResult> GetDroneItems([FromRoute] string serialNo)
         {
             var response = await _droneService.FetchDroneItems(serialNo);
+            return StatusCode(response.StatusCode, response);
+        }
+
+        [HttpGet("{serialNo}")]
+        [Route("GetDroneBatteryLevel")]
+
+        [ProducesResponseType(typeof(BaseResult<int>), 200)]
+        [ProducesResponseType(typeof(BaseResult<>), 400)]
+        [ProducesResponseType(typeof(BaseResult<>), 500)]
+        public async Task<IActionResult> GetDroneBatteryLevel([FromRoute] string serialNo)
+        {
+            var response = await _droneService.GetDroneBatteryLevel(serialNo);
             return StatusCode(response.StatusCode, response);
         }
 
