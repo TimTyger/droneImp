@@ -16,6 +16,7 @@ namespace drone_Domain.Dtos
         [Required]
         public int StateId { get; set; }
         [Required]
+        [Range(0,100,ErrorMessage ="Value should be between 0 and 100")]
         public int BatteryLevel { get; set; }
     }
 }
