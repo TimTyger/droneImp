@@ -1,34 +1,70 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using drone_Domain.Dtos;
+using drone_Domain.Entities;
+using drone_implementation.Implementation.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace drone_implementation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class dispatchController : ControllerBase
+    public class DispatchController : BaseController<Drone>
     {
-        public dispatchController()
+        private readonly ILogger _logger;
+        private readonly IDroneService _droneService;
+        public DispatchController(IBaseService<Drone,BaseDto> baseService, IBaseResponse<object> baseResponse,ILogger logger, IDroneService droneService, IMedicationService medicationService) : base(baseService, baseResponse)
         {
-
+            _logger = logger;
+            _droneService = droneService;
         }
-        // GET: api/<ValuesController>
+
+
         [HttpGet]
-        public IEnumerable<string> Get()
+        [Route("FetchAllDrones")]
+
+        [ProducesResponseType(typeof(BaseResult<List<DroneResp>>), 200)]
+        [ProducesResponseType(typeof(BaseResult<>), 400)]
+        [ProducesResponseType(typeof(BaseResult<>), 500)]
+        public async Task<IActionResult> GetAllDrones()
         {
-            return new string[] { "value1", "value2" };
+            var response =  await _droneService.FetchDrones();
+            return StatusCode(response.StatusCode, response);
         }
 
-        // GET api/<ValuesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{serialNo}")]
+        [Route("FetchDroneItems")]
+
+        [ProducesResponseType(typeof(BaseResult<List<MedicationResp>>), 200)]
+        [ProducesResponseType(typeof(BaseResult<>), 400)]
+        [ProducesResponseType(typeof(BaseResult<>), 500)]
+        public async Task<IActionResult> GetDroneItems([FromRoute] string serialNo)
         {
-            return "value";
+            var response = await _droneService.FetchDroneItems(serialNo);
+            return StatusCode(response.StatusCode, response);
         }
 
-        // POST api/<ValuesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        [Route("RegisterDrone")]
+        [ProducesResponseType(typeof(BaseResult<>), 200)]
+        [ProducesResponseType(typeof(BaseResult<>), 400)]
+        [ProducesResponseType(typeof(BaseResult<>), 500)]
+        public async Task<IActionResult> RegisterDrone([FromBody] RegisterDroneDto newDrone)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new BaseResult<object>
+                {
+                    ResponseCode = "99",
+                    ResponseMessage = "Bad Request",
+                    Success = false,
+                    StatusCode = 400
+                });
+
+            }
+            var response = await _droneService.RegisterDrone(newDrone);
+
+            return StatusCode(response.StatusCode, response);
+
         }
 
         // PUT api/<ValuesController>/5
