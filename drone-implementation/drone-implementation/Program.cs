@@ -1,8 +1,12 @@
+using AutoMapper;
 using ddrone_DataAccess;
 using drone_DataAccess;
 using drone_DataAccess.Repositories;
 using drone_DataAccess.UnitOfWork;
 using drone_Domain.Interfaces;
+using drone_implementation.Implementation.Interfaces;
+using drone_implementation.Implementation.Services;
+using drone_implementation.Profiles;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,10 +25,24 @@ builder.Services.AddTransient<IDroneModelRepository, DroneModelRepository>();
 builder.Services.AddTransient<IStateRepository, StateRepository>();
 #endregion
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
-
-
+builder.Services.AddScoped(typeof(IBaseResponse<>), typeof(BaseResponse<>));
+builder.Services.AddScoped(typeof(IBaseService<,>), typeof(BaseService<,>));
+builder.Services.AddScoped<IDroneService, DroneService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+
+// Auto Mapper Configurations
+var mapperConfig = new MapperConfiguration(mc =>
+{
+    mc.AddProfile(new MappingProfiles());
+});
+
+IMapper mapper = mapperConfig.CreateMapper();
+builder.Services.AddSingleton(mapper);
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
