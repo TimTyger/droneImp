@@ -9,6 +9,9 @@ namespace drone_implementation.Profiles
         public MappingProfiles()
         {
             CreateMap<Drone, RegisterDroneDto>().ReverseMap();
+            CreateMap<Drone, DroneResp>().ReverseMap();
+            CreateMap<MedicationResp, Medication>().ReverseMap();
+            CreateMap<DroneResp, Drone>().ReverseMap();
         }
     }
 }
