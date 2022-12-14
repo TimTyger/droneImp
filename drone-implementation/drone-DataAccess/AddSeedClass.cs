@@ -43,27 +43,27 @@ namespace drone_DataAccess
                 {
                     new State
                     {
-                        Id = 1,Value="Idle"
+                        Id = 1,Value="Idle",CreatedBy="SYSTEM",CreatedAt=DateTime.Now
                     },
                     new State
                     {
-                        Id = 2,Value="Loading"
+                        Id = 2,Value="Loading",CreatedBy="SYSTEM",CreatedAt=DateTime.Now
                     },
                     new State
                     {
-                        Id = 3,Value="Loaded"
+                        Id = 3,Value="Loaded",CreatedBy="SYSTEM",CreatedAt=DateTime.Now
                     },
                     new State
                     {
-                        Id = 4,Value="Delivering"
+                        Id = 4,Value="Delivering",CreatedBy="SYSTEM",CreatedAt=DateTime.Now
                     },
                     new State
                     {
-                        Id = 5,Value="Delivered"
+                        Id = 5,Value="Delivered",CreatedBy="SYSTEM",CreatedAt=DateTime.Now
                     },
                     new State
                     {
-                        Id = 6,Value="Returning"
+                        Id = 6,Value="Returning",CreatedBy="SYSTEM",CreatedAt=DateTime.Now
                     }
 
                 };
@@ -94,8 +94,22 @@ namespace drone_DataAccess
                     {
                         Id = 5,SerialNumber="A123456789B",ModelId=1,BatteryLevel=100,StateId=1,CreatedBy="SYSTEM",CreatedAt=DateTime.Now
                     },
+                    new Drone{
+                        Id=6,
+                      SerialNumber= "ABC_002",
+                      ModelId=1,
+                      StateId= 1,
+                      BatteryLevel= 10,CreatedBy="SYSTEM",CreatedAt=DateTime.Now
+                    },
+                    new Drone{
+                        Id=7,
+                      SerialNumber= "ABC_002",
+                      ModelId=1,
+                      StateId= 1,
+                      BatteryLevel= 50,CreatedBy="SYSTEM",CreatedAt=DateTime.Now
+                    }
 
-                };
+        };
                 context.Drones.AddRange(drones);
                 context.SaveChanges();
             };
@@ -112,7 +126,7 @@ namespace drone_DataAccess
                     },
                     new Medication
                     {
-                        Id = 3,Name="TestItem",CreatedBy="SYSTEM",CreatedAt=DateTime.Now,Code="ITEM2",Weight=1700,Image="iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII"
+                        Id = 3,Name="TestItem",CreatedBy="SYSTEM",CreatedAt=DateTime.Now,Code="ITEM2",Weight=700,Image="iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII"
                     },
                     new Medication
                     {
