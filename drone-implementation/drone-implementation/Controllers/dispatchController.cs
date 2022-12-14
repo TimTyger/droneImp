@@ -10,11 +10,11 @@ namespace drone_implementation.Controllers
     [ApiController]
     public class DispatchController : BaseController<Drone>
     {
-        private readonly ILogger _logger;
+       // private readonly ILogger _logger;
         private readonly IDroneService _droneService;
-        public DispatchController(IBaseService<Drone,BaseDto> baseService, IBaseResponse<object> baseResponse,ILogger logger, IDroneService droneService, IMedicationService medicationService) : base(baseService, baseResponse)
+        public DispatchController(IBaseService<Drone,BaseDto> baseService, IBaseResponse<object> baseResponse, IDroneService droneService) : base(baseService, baseResponse)
         {
-            _logger = logger;
+            //_logger = logger;
             _droneService = droneService;
         }
 
@@ -43,30 +43,7 @@ namespace drone_implementation.Controllers
             return StatusCode(response.StatusCode, response);
         }
 
-        [HttpGet("{serialNo}")]
-        [Route("FetchDroneItems")]
-
-        [ProducesResponseType(typeof(BaseResult<List<MedicationResp>>), 200)]
-        [ProducesResponseType(typeof(BaseResult<>), 400)]
-        [ProducesResponseType(typeof(BaseResult<>), 500)]
-        public async Task<IActionResult> GetDroneItems([FromRoute] string serialNo)
-        {
-            var response = await _droneService.FetchDroneItems(serialNo);
-            return StatusCode(response.StatusCode, response);
-        }
-
-        [HttpGet("{serialNo}")]
-        [Route("GetDroneBatteryLevel")]
-
-        [ProducesResponseType(typeof(BaseResult<int>), 200)]
-        [ProducesResponseType(typeof(BaseResult<>), 400)]
-        [ProducesResponseType(typeof(BaseResult<>), 500)]
-        public async Task<IActionResult> GetDroneBatteryLevel([FromRoute] string serialNo)
-        {
-            var response = await _droneService.GetDroneBatteryLevel(serialNo);
-            return StatusCode(response.StatusCode, response);
-        }
-
+        
         [HttpPost]
         [Route("RegisterDrone")]
         [ProducesResponseType(typeof(BaseResult<>), 200)]
@@ -91,16 +68,54 @@ namespace drone_implementation.Controllers
 
         }
 
-        // PUT api/<ValuesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+
+        [HttpPut]
+        [Route("LoadDrone")]
+        [ProducesResponseType(typeof(BaseResult<>), 200)]
+        [ProducesResponseType(typeof(BaseResult<>), 400)]
+        [ProducesResponseType(typeof(BaseResult<>), 500)]
+        public async Task<IActionResult> LoadDrone([FromBody] LoadDroneDto loadDroneDto)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new BaseResult<object>
+                {
+                    ResponseCode = "99",
+                    ResponseMessage = "Bad Request",
+                    Success = false,
+                    StatusCode = 400
+                });
+
+            }
+            var response = await _droneService.LoadDrone(loadDroneDto);
+
+            return StatusCode(response.StatusCode, response);
+
         }
 
-        // DELETE api/<ValuesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpGet()]
+        [Route("FetchDroneItems/{serialNo}")]
+
+        [ProducesResponseType(typeof(BaseResult<List<MedicationResp>>), 200)]
+        [ProducesResponseType(typeof(BaseResult<>), 400)]
+        [ProducesResponseType(typeof(BaseResult<>), 500)]
+        public async Task<IActionResult> GetDroneItems([FromRoute] string serialNo)
         {
+            var response = await _droneService.FetchDroneItems(serialNo);
+            return StatusCode(response.StatusCode, response);
         }
+
+        [HttpGet()]
+        [Route("GetDroneBatteryLevel/{serialNo}")]
+
+        [ProducesResponseType(typeof(BaseResult<int>), 200)]
+        [ProducesResponseType(typeof(BaseResult<>), 400)]
+        [ProducesResponseType(typeof(BaseResult<>), 500)]
+        public async Task<IActionResult> GetDroneBatteryLevel([FromRoute] string serialNo)
+        {
+            var response = await _droneService.GetDroneBatteryLevel(serialNo);
+            return StatusCode(response.StatusCode, response);
+        }
+
     }
 }
