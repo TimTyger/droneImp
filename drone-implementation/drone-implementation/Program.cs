@@ -30,6 +30,10 @@ builder.Services.AddScoped(typeof(IBaseResponse<>), typeof(BaseResponse<>));
 builder.Services.AddScoped(typeof(IBaseService<,>), typeof(BaseService<,>));
 builder.Services.AddScoped<IDroneService, DroneService>();
 builder.Services.AddScoped<IDroneItemService, DroneItemService>();
+
+builder.Services.AddHostedService<BackgroundReportService>();
+
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -44,7 +48,6 @@ var mapperConfig = new MapperConfiguration(mc =>
 
 IMapper mapper = mapperConfig.CreateMapper();
 builder.Services.AddSingleton(mapper);
-
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
