@@ -11,6 +11,5 @@ namespace drone_Domain.Interfaces
         Task<Drone> GetDrone(string serialNo);
         Task<List<Drone>> FetchAllAvailableForLoading();
         Task<bool> IsAvailableForLoading(Drone drone);
-        Task<Drone> LoadDrone(Drone drone, List<Medication> medications);
     }
 }

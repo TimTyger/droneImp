@@ -22,12 +22,14 @@ builder.Services.AddTransient(typeof(IGenericRepository<>), typeof(GenericReposi
 builder.Services.AddTransient<IMedicationRepository, MedicationRepository>();
 builder.Services.AddTransient<IDroneRepository, DroneRepository>();
 builder.Services.AddTransient<IDroneModelRepository, DroneModelRepository>();
+builder.Services.AddTransient<IDroneItemRepository, DroneItemRepository>();
 builder.Services.AddTransient<IStateRepository, StateRepository>();
 #endregion
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped(typeof(IBaseResponse<>), typeof(BaseResponse<>));
 builder.Services.AddScoped(typeof(IBaseService<,>), typeof(BaseService<,>));
 builder.Services.AddScoped<IDroneService, DroneService>();
+builder.Services.AddScoped<IDroneItemService, DroneItemService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

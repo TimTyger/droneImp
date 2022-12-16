@@ -12,10 +12,12 @@ namespace drone_implementation.Controllers
     {
        // private readonly ILogger _logger;
         private readonly IDroneService _droneService;
-        public DispatchController(IBaseService<Drone,BaseDto> baseService, IBaseResponse<object> baseResponse, IDroneService droneService) : base(baseService, baseResponse)
+        private readonly IDroneItemService _droneItemService;
+        public DispatchController(IBaseService<Drone,BaseDto> baseService, IBaseResponse<object> baseResponse, IDroneItemService droneItemService, IDroneService droneService) : base(baseService, baseResponse)
         {
             //_logger = logger;
             _droneService = droneService;
+            _droneItemService = droneItemService;
         }
 
 
@@ -87,7 +89,7 @@ namespace drone_implementation.Controllers
                 });
 
             }
-            var response = await _droneService.LoadDrone(loadDroneDto);
+            var response = await _droneItemService.LoadDrone(loadDroneDto);
 
             return StatusCode(response.StatusCode, response);
 
@@ -101,7 +103,7 @@ namespace drone_implementation.Controllers
         [ProducesResponseType(typeof(BaseResult<>), 500)]
         public async Task<IActionResult> GetDroneItems([FromRoute] string serialNo)
         {
-            var response = await _droneService.FetchDroneItems(serialNo);
+            var response = await _droneItemService.FetchDroneItems(serialNo);
             return StatusCode(response.StatusCode, response);
         }
 

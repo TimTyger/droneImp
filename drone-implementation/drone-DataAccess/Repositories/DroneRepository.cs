@@ -123,45 +123,6 @@ namespace drone_DataAccess.Repositories
 
             }
         }
-        public Task<Drone> LoadDrone(Drone drone, List<Medication> medications)
-        {
-
-            try
-            {
-                foreach (var item in medications)
-                {
-                    drone.Medications.Add(item);
-                }
-                var newDrone = new Drone
-                {
-                    BatteryLevel = drone.BatteryLevel,
-                    Id = drone.Id,
-                    Medications = drone.Medications.Select(y => new Medication
-                    {
-                        Code = y.Code,
-                        Name = y.Name,
-                        Id = y.Id,
-                        Image = y.Image,
-                        Weight = y.Weight
-                    }).ToList(),
-                    Model = new DroneModel { Model = drone.Model.Model, Id = drone.Model.Id, MaxWeight = drone.Model.MaxWeight },
-                    SerialNumber = drone.SerialNumber,
-                    ModelId = drone.ModelId,
-                    StateId = drone.StateId,
-                    Weight = drone.Weight
-
-                };
-                _context.Drones.Update(drone);
-                _context.SaveChanges();
-                return Task.FromResult(newDrone);
-            }
-            catch (Exception ex)
-            {
-                return Task.FromResult(new Drone());
-
-            }
-        }
-
 
         /// <summary>
         /// checks if drone is available for loading

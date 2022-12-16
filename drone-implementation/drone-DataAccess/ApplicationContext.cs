@@ -17,6 +17,7 @@ namespace ddrone_DataAccess
         //    builder.UseInMemoryDatabase(databaseName:"DroneDb");
         //}
         public DbSet<Drone> Drones { get; set; }
+        public DbSet<DroneItems> DroneItems { get; set; }
         public DbSet<Medication> Medications { get; set; }
         public DbSet<DroneModel> Models { get; set; }
         public DbSet<State> States { get; set; }

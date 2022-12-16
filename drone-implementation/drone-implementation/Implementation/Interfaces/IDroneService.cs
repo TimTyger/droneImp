@@ -7,8 +7,6 @@ namespace drone_implementation.Implementation.Interfaces
     {
         Task<BaseResult<Object>> RegisterDrone(RegisterDroneDto registerDroneDto);
         Task<BaseResult<object>> FetchDrones();
-        Task<BaseResult<Object>> LoadDrone(LoadDroneDto loadDroneDto);
-        Task<BaseResult<object>> FetchDroneItems(string serialNo);
         Task<BaseResult<object>> FetchAvailbleDrones();
         Task<BaseResult<object>> GetDroneBatteryLevel(string serialNo);
     }
