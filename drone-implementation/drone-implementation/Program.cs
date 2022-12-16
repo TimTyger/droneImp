@@ -32,6 +32,7 @@ builder.Services.AddScoped<IDroneService, DroneService>();
 builder.Services.AddScoped<IDroneItemService, DroneItemService>();
 
 builder.Services.AddHostedService<BackgroundReportService>();
+builder.Services.AddScoped<IBackgroundReportService, ReportGenerationService>();
 
 
 builder.Services.AddControllers();
