@@ -10,6 +10,7 @@ namespace drone_implementation.Implementation.Services
         private readonly IServiceProvider _serviceProvider;
         private readonly ILogger<BackgroundReportService> _logger;
         private readonly IConfiguration _config;
+        private int _timeInterval;
         public BackgroundReportService(
         IServiceProvider serviceProvider,
         ILogger<BackgroundReportService> logger,
@@ -18,7 +19,7 @@ namespace drone_implementation.Implementation.Services
             _serviceProvider = serviceProvider;   
             _logger = logger;
             _config = config;
-            //_timeInterval = int.Parse(_config.GetSection("ReportIntervalInMinutes").Value);
+            _timeInterval = int.Parse(_config.GetSection("ReportIntervalInMinutes").Value);
         }
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
@@ -27,13 +28,18 @@ namespace drone_implementation.Implementation.Services
 
         private async Task GenerateReport(CancellationToken stoppingToken)
         {
-            using (IServiceScope scope = _serviceProvider.CreateScope())
+            while(!stoppingToken.IsCancellationRequested)
             {
-                IBackgroundReportService scopedProcessingService =
-                    scope.ServiceProvider.GetRequiredService<IBackgroundReportService>();
+                using (IServiceScope scope = _serviceProvider.CreateScope())
+                {
+                    IBackgroundReportService scopedProcessingService =
+                        scope.ServiceProvider.GetRequiredService<IBackgroundReportService>();
 
-                await scopedProcessingService.GenerateReport(stoppingToken);
+                    await scopedProcessingService.GenerateReport(stoppingToken, DateTime.Now.ToString("f")).ConfigureAwait(false);
+                }
+                await Task.Delay(_timeInterval * 60000, stoppingToken);
             }
+
         }
     }
 }
