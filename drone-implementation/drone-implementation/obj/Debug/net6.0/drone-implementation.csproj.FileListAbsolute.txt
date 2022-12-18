@@ -45,3 +45,7 @@ C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementati
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\obj\Debug\net6.0\drone-implementation.pdb
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\obj\Debug\net6.0\drone-implementation.genruntimeconfig.cache
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\obj\Debug\net6.0\ref\drone-implementation.dll
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\bin\Debug\net6.0\NLog.config
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\bin\Debug\net6.0\NLog.dll
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-implementation\bin\Debug\net6.0\NLog.Web.AspNetCore.dll

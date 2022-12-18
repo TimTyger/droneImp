@@ -1,6 +1,8 @@
 ﻿using drone_Domain.Dtos;
 using drone_Domain.Entities;
 using drone_implementation.Implementation.Interfaces;
+using NLog;
+using System.Text;
 
 namespace drone_implementation.Implementation.Services
 {
@@ -10,23 +12,24 @@ namespace drone_implementation.Implementation.Services
         private readonly ILogger<ReportGenerationService> _logger;
 
         private readonly IConfiguration _config;
-        public ReportGenerationService(IDroneService droneService,IConfiguration config, ILogger<ReportGenerationService> logger)
+        public ReportGenerationService(IDroneService droneService, ILogger<ReportGenerationService> logger,IConfiguration config)
         {
             _droneService = droneService;
-            _logger = logger;
             _config = config;
+            _logger = logger;
         }
         public async Task GenerateReport(CancellationToken stoppingToken, string time)
         {
 
             try
             {
-                    
+                StringBuilder reportBuilder = new StringBuilder();
+
                 if (!stoppingToken.IsCancellationRequested)
                 {
                     var drones = await _droneService.GetAll();
                     //.ToListAsync();
-
+                    reportBuilder.AppendLine("DroneId| \t DroneSerialNo| \t BatteryLevel| \t  Time|");
                     if (drones.Data != null)
                     {
                         var report = ((List<Drone>)drones.Data).Select(a => new
@@ -38,13 +41,13 @@ namespace drone_implementation.Implementation.Services
                         });
                         foreach (var item in report)
                         {
-                            _logger.LogInformation($"{item.droneId}| \t {item.droneSerialNo}| \t {item.batteryLevel}| \t  {item.time}|");
+                            reportBuilder.AppendLine($"{item.droneId}| \t {item.droneSerialNo}| \t {item.batteryLevel}| \t  {item.time}|");
                         }
                     }
                     else _logger.LogError($"No Drone Available At this Time {time:f}");
 
                 }
-
+                _logger.LogInformation(reportBuilder.ToString());
             }
             catch (Exception ex)
             {

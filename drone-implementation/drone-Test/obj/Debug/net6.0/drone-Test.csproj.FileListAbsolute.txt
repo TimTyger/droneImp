@@ -129,3 +129,5 @@ C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Deb
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.pdb
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\drone-Test.genruntimeconfig.cache
 C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\obj\Debug\net6.0\ref\drone-Test.dll
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\NLog.config
+C:\Users\Dell\source\repos\timothy-adebo\drone-implementation\drone-Test\bin\Debug\net6.0\NLog.dll

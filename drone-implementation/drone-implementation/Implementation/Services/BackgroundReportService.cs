@@ -8,16 +8,13 @@ namespace drone_implementation.Implementation.Services
     public class BackgroundReportService : BackgroundService
     {
         private readonly IServiceProvider _serviceProvider;
-        private readonly ILogger<BackgroundReportService> _logger;
         private readonly IConfiguration _config;
         private int _timeInterval;
         public BackgroundReportService(
         IServiceProvider serviceProvider,
-        ILogger<BackgroundReportService> logger,
         IConfiguration config)
         {
             _serviceProvider = serviceProvider;   
-            _logger = logger;
             _config = config;
             _timeInterval = int.Parse(_config.GetSection("ReportIntervalInMinutes").Value);
         }
