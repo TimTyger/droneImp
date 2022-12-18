@@ -70,3 +70,39 @@ While implementing your solution **please take care of the following requirement
 ---
 
 :scroll: **END**
+
+
+##### Implementation
+-A base/generic controller controller, service and repository was created which contains basic functions/commands that can be inherited by other services
+-A time interval was cnfigured in the appsettings (to give user ability to be able to modify intervals at which reports are generated)
+-also added to the appsettings.json is a maximum weight field (for control purpose). Makes it easy to reconfigure the maximum weight any drone may be permitted to carry. This can be different for different regions based on policies, hence it can easily be reconfigured in the appsettings.
+
+-The system consists of 5 tables 
+ drone- which houses the registerd drones
+ droneItems - where the items attached to a drone are located
+ droneModel - where the different drone models are stored
+ medication - a table where the available medications are stored
+ state - the table housing the different states a drone can be in
+The drone, droneModel,medication and state table have ben preloaded with data to aid the loading of drones.
+
+-There are six(6) available endpoints
+ -FetchAllDrones - to get all the drones in the system
+ -FetchAvailableDrones - to get all drones that are Idle/available
+ -RegisterDrone - to register new drones
+ -LoadDrone - to load medications on a drone (during loading, drone state is updated to loading. If loading was successful, state is updated to loaded else it is returned to an idle state for failed loading process)
+ -FetchDroneItems - to help retrieve items attached to a drone using the drone S/N
+ -GetDroneBatteryLevel - to help retrieve battery level for a drone using its serial number.
+
+To build and run solution
+-pull code from repository
+-restore nugget packages for solution to restore project dependencies (
+    alternatively, you need to install the following nuGet packages
+    -Microsoft.AspNetCore.Mvc 2.2.0
+    -Microsoft.EntityFrameworkCore 6.0.11
+    -Microsoft.EntityFrameworkCore.InMemory 6.0.11
+    -Newtonsoft.Json 13.0.2
+    -Nlog 5.1.0
+    -Nlog.Web.AspNetCore 5.2.0
+    -Nlog.Extensions.Logging 5.2.0
+)
+-build solution (swagger UI loads up to test solution endpoints).
